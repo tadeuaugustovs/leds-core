@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "isolatedModules": true,
+    "declaration": false,
+    "outDir": "./build",
+    "rootDir": ".", 
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "#controllers/*": ["app/controllers/*"],
+      "#models/*": ["app/models/*"],
+      "#database/*": ["database/*"],
+      "#start/*": ["start/*"],
+      "#config/*": ["config/*"]
+    }
+  },
+  "include": ["**/*.ts", ".adonisrc.ts"],
+  "exclude": ["node_modules"]
+}
