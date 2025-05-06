@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nova Bolsa</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+    form { background: white; padding: 20px; border-radius: 5px; width: 400px; }
+    label { display: block; margin-top: 10px; }
+    input[type="text"], input[type="number"] {
+      width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 3px;
+    }
+    button {
+      margin-top: 15px; padding: 10px 20px; background-color: #007bff;
+      color: white; border: none; border-radius: 3px; cursor: pointer;
+    }
+    a { display: inline-block; margin-top: 15px; text-decoration: none; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Adicionar Nova Bolsa</h1>
+
+  <form method="POST" action="/bolsas">
+    <input type="hidden" name="_method" value="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label>Valor:</label>
+    <input type="number" name="valor" step="0.01" required>
+
+    <label>Tipo Bolsa ID:</label>
+    <input type="number" name="tipo_bolsa_id" required>
+
+    <label>Patrocinador:</label>
+    <input type="text" name="patrocinador" required>
+
+    <label>Quantidade de Membros:</label>
+    <input type="number" name="quantidade_membros" required>
+
+    <button type="submit">Salvar Bolsa</button>
+  </form>
+
+  <a href="/bolsas">← Voltar para a lista</a>
+</body>
+</html>

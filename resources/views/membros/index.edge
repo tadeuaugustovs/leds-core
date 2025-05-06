@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Membros</title>
+</head>
+<body>
+  <h1>Lista de Membros</h1>
+
+  <ul>
+    @each(membro in membros)
+      <li>
+        ID: {{ membro.id }} |
+        Nome: {{ membro.nome || 'Não informado' }} |
+        Email: {{ membro.email || 'Não informado' }} |
+        CPF: {{ membro.cpf || 'Não informado' }} |
+        Criado em: {{ membro.createdAt }}
+      </li>
+    @endeach
+  </ul>
+
+  <a href="/">Voltar para a Home</a>
+</body>
+</html>

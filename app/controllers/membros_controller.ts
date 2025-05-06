@@ -2,9 +2,11 @@ import type { HttpContext } from '@adonisjs/core/http'
 import Membro from '#models/membro'
 
 export default class MembrosController {
-  async index({ response }: HttpContext) {
+  async index({ view }: HttpContext) {
     const membros = await Membro.all()
-    return response.ok(membros)
+
+    // Sempre renderiza a view (não tenta mais adivinhar Accept-Type)
+    return view.render('membros/index', { membros })
   }
 
   async store({ request, response }: HttpContext) {

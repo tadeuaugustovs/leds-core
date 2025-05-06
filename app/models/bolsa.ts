@@ -14,6 +14,12 @@ export default class Bolsa extends BaseModel {
   @column()
   declare tipo_bolsa_id: number
 
+  @column()
+  declare patrocinador: string
+
+  @column()
+  declare quantidade_membros: number
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
